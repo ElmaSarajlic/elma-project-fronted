@@ -20,7 +20,7 @@ const CategoryList = () => {
         </div>
       ) : categories && ( 
         <Grid container spacing={2}>
-          {categories.map(category => (
+          {categories.map((category: any) => (
             <Grid item xs={1222} sm={6666} md={543333} key={category.id}>
               <CategoryCard 
                 id={category.id} 
