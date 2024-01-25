@@ -6,7 +6,7 @@ import { User } from '../../utils/types';
 
 
 
-const UserList: React.FC< User > = () => {
+const UserList: React.FC = () => {
     const { data: users, error } = useGetUsers();
   
     if (error) {
@@ -19,7 +19,7 @@ const UserList: React.FC< User > = () => {
   
     return (
       <Grid container spacing={2} direction="column" alignItems="stretch"> 
-        {users.map((user) => (
+        {users.map((user: User) => (
           <Grid item key={user.id} xs={12}> 
             <UserCard user={user} />
           </Grid>

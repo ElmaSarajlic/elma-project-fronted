@@ -31,7 +31,7 @@ const AdCard = ({ ad }: Props) => {
         window.location.reload();
         
       },
-      onError: (error) => { 
+      onError: (error: any) => { 
         console.error('Error deleting the ad:', error);
       },
     });

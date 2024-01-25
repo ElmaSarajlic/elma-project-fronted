@@ -6,19 +6,19 @@ import { RootState } from '../store';
 import '../App.css'
 import ChangeUserInfoCard from '../components/ChangeUserInfoCard';
 import { useNavigate } from 'react-router-dom';
+import { User } from '../utils/types';
 
 const EditUserPage: React.FC = () => {
   const userId = useSelector((state: RootState) => state.auth.userId);
   const navigate = useNavigate(); 
 
-
-  const [user, setUser] = useState({
+  if(!userId) return null;
+  
+  const [user, setUser] = useState<User>({
     id: userId,
-    imgUrl :'',
+    imgUrl: '',
     username: ''
   });
-
-
 
   return (
     <div>

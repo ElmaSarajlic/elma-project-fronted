@@ -1,10 +1,7 @@
 import { useMutation, useQueryClient } from "react-query";
-import { Category, Subcategory } from "../utils/types";
+import { Subcategory } from "../utils/types";
 import { CategoryService } from "../services";
 
-interface ApiError {
-  message: string;
-}
 
 const useCreateSubcategory = () => {
     const queryClient = useQueryClient();
